@@ -709,3 +709,35 @@ page rendering and painting.
 .. _`downgrade attack`: http://en.wikipedia.org/wiki/SSL_stripping
 .. _`OSI Model`: https://en.wikipedia.org/wiki/OSI_model
 .. _`Spanish`: https://github.com/gonzaleztroyano/what-happens-when-ES
+
+A Web Stack Journey!!! Simplified
+
+As we enter the world of the internet and browse our favorite websites daily, we rarely stop to think about the intricate processes that occur behind the scenes. When we type "https://www.google.com" into our browser's address bar and press Enter, an impressive sequence of events unfolds, involving various components of the web stack. In this blog post, we will explore each step of this journey, shedding light on the roles of each in delivering the Google homepage to our screens.
+
+DNS Request:
+The journey begins with the Domain Name System (DNS) request. DNS serves as the internet's address book, converting human-readable domain names like "google.com" into IP addresses, which computers understand. When you type "https://www.google.com" and hit Enter, your browser sends a DNS request to a DNS resolver to find the corresponding IP address for "google.com."
+
+TCP/IP:
+With the IP address obtained from the DNS resolver, your browser establishes a Transmission Control Protocol (TCP) connection to the Google server. TCP enables reliable data transmission between devices over the internet. This connection follows the Internet Protocol (IP) to route the data packets to the correct destination.
+
+Firewall:
+At this point, the request passes through a Firewall—a security system that acts as a barrier between a trusted internal network and untrusted external networks. The Firewall inspects the incoming data packets, ensuring they meet the defined security criteria before allowing them to proceed further.
+
+HTTPS/SSL:
+To protect your data from eavesdropping and ensure a secure connection, the browser initiates a handshake process with the server using the Hypertext Transfer Protocol Secure (HTTPS) protocol. During this handshake, the server presents a digital certificate to the browser, issued by a trusted Certificate Authority (CA). The browser verifies the authenticity of the certificate and the identity of the server. If successful, the browser and server establish a secure encrypted SSL/TLS connection.
+
+Load-balancer:
+Websites like Google receive an immense number of requests every second. To distribute the incoming traffic evenly and avoid overloading a single server, a Load-balancer comes into play. The Load-balancer intelligently directs the incoming requests to multiple Web Servers, optimizing resource usage and ensuring responsiveness.
+
+Web Server:
+After passing through the Load-balancer, the request reaches one of Google's many Web Servers. The Web Server processes the request, retrieves the relevant data (in this case, the Google homepage), and generates an HTML response.
+
+Application Server:
+In the case of dynamic web pages, the Web Server may interact with an Application Server. The Application Server handles more complex logic, such as database queries, user authentication, and data processing. For Google's search functionality, the Application Server would process the search query and retrieve search results from the Database.
+
+Database:
+In our example, to display search results, the Application Server queries the Database—a vast collection of indexed data. The Database contains all sorts of information, from web page content to user data, allowing Google to retrieve relevant search results quickly.
+
+Understanding these fundamental components and their roles in web application delivery is crucial for software engineers and tech professionals working with the internet. As we continue to explore the ever-evolving world of technology, let us remain curious and never cease to marvel at the wonders of the web stack.
+
+This is just a tip of the iceberg…
